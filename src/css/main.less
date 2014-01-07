@@ -26,7 +26,7 @@ body {
 /* Titles */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Lato', sans-serif;
-    font-weight: 300;
+    font-weight: 500;
     color: @secondaryColor;
 }
 
@@ -164,7 +164,7 @@ hr {
     margin-top: 8px;
     > li > a {
       color: #222;
-      &.active {
+      &.active, &:hover {
         font-weight: bold;
       }
     }
@@ -191,6 +191,7 @@ i {
 
 .full-bg {
     width: 100%;
+    padding: 40px 0;
 
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -316,9 +317,26 @@ i {
   background-color: #fff;
   padding: 30px 0 70px;
 }
+.event-desc p {
+  color: #FFF;
+  font-weight: 500;
+  font-size: 20px;
+}
 .event-wrap {
-  background-color: #fff;
-  padding-bottom: 20px;
+  background-image: url('@{static}images/salvador-bg.jpg');
+  background-position: 0 0;
+  padding-bottom: 70px;
+  min-height: 600px;
+}
+.thumb-city {
+  padding: 0;
+  border: 9px solid #FFF;
+  width: 361px;
+  margin-right: 28px;
+  float: left;
+  &:last-child {
+    margin-right: 0;
+  }
 }
 .jusbrasil-logo img, .evolux-logo img {
   margin-top: 20px;

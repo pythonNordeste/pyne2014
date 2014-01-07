@@ -1,4 +1,4 @@
-/* global $ */
+/* global $, jQuery */
 
 $(function() {
 
@@ -7,8 +7,28 @@ $(function() {
   pyne2014.init = function() {
     this.HEADER_HEIGHT = 67;
     this.scrollHandler();
+    this.initializeJqueryFilters();
+    this.parallaxHandler();
 
     window.pyne2014 = pyne2014;
+  };
+
+  pyne2014.initializeJqueryFilters = function() {
+    (function($) {
+      $.expr[':'].appearing = function(elem) {
+        var $window = $(window),
+            windowViewTop = $window.scrollTop(),
+            windowViewBottom = windowViewTop + $window.height(),
+            elemTop = $(elem).offset().top,
+            elemBottom = elemTop + $(elem).height(),
+
+            isAppearingFully = ((elemTop >= windowViewTop) && (elemBottom <= windowViewBottom)),
+            isAppearingBottom = ((windowViewTop > elemTop) && (windowViewTop < elemBottom)),
+            isAppearingTop = ((windowViewBottom > elemTop) && (windowViewTop < elemBottom));
+
+        return isAppearingFully || isAppearingBottom || isAppearingTop;
+      };
+    })(jQuery);
   };
 
   pyne2014.scrollPage = function(articleToGo){
@@ -48,6 +68,21 @@ $(function() {
       }
     });
   };
+
+  pyne2014.parallaxHandler = function() {
+    var $window = $(window);
+    $window.scroll(function(){
+      $('.full-bg').each(function(){
+        var $this = $(this);
+        if ($this.is(':appearing')) {
+          var elemOffset = $this.offset(),
+              scrolled = $window.scrollTop() - elemOffset.top;
+          $this.css('backgroundPosition', '0 ' + scrolled * ($this.data('speed') || 0.7) + 'px');
+        }
+      });
+    });
+  };
+
 
   pyne2014.init();
 });
