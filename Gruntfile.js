@@ -17,7 +17,7 @@ module.exports = function(grunt) {
         stripBanners: true
       },
       dist: {
-        src: ['lib/<%= pkg.name %>.js'],
+        src: ['src/js/base.js', 'src/js/lib/*.js'],
         dest: 'assets/js/<%= pkg.name %>.js'
       }
     },
@@ -48,6 +48,9 @@ module.exports = function(grunt) {
       },
       gruntfile: {
         src: 'Gruntfile.js'
+      },
+      jsfiles: {
+        src: ['src/js/*.js']
       }
     },
     less: {
@@ -70,6 +73,10 @@ module.exports = function(grunt) {
         files: ['src/css/*.less'],
         tasks: ['less'],
       },
+      js: {
+        files: ['src/js/*.js'],
+        tasks: ['minjs']
+      }
     }
   });
 
@@ -82,6 +89,7 @@ module.exports = function(grunt) {
 
   // Default task.
   // grunt.registerTask('default', ['jshint', 'concat', 'uglify']);
-  grunt.registerTask('default', ['less']);
+  grunt.registerTask('default', ['less', 'jshint', 'concat', 'uglify']);
+  grunt.registerTask('minjs', ['jshint', 'concat', 'uglify']);
 
 };
