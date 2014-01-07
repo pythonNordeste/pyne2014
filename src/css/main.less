@@ -117,7 +117,7 @@ hr {
 }
 */
 
- [class^="icon-"]:before, [class*=" icon-"]:before {
+[class^="icon-"]:before, [class*=" icon-"]:before {
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
@@ -148,6 +148,9 @@ hr {
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
+.logo-small {
+  padding: 10px 0;
+}
 .icon-github-circled:before { content: '\e802'; } /* '' */
 .icon-twitter:before { content: '\e801'; } /* '' */
 
@@ -156,12 +159,16 @@ hr {
     border-color: transparent;
 }
 
-.navbar-default .navbar-brand {
-    color: white;
-}
-
-.navbar-default .navbar-nav > li > a {
-    color: #222;
+.navbar-default {
+  .navbar-nav {
+    margin-top: 8px;
+    > li > a {
+      color: #222;
+      &.active {
+        font-weight: bold;
+      }
+    }
+  }
 }
 
 /* Helpers */
@@ -204,7 +211,7 @@ i {
     /* background: url(../img/bg01.jpg) no-repeat center top; */
     background-color: @primaryColor;
     margin-top: -20px;
-    padding-top:200px;
+    padding-top: 140px;
     min-height: 650px;
 
     h1 {
