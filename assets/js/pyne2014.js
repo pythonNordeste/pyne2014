@@ -42,9 +42,11 @@ $(function() {
     }
 
     $('.navbar-nav').on('click', 'a, img', function(e) {
-      e.preventDefault();
       var articleToGo = $(this).data('article');
-      _this.scrollPage(articleToGo);
+      if (articleToGo) {
+        e.preventDefault();
+        _this.scrollPage(articleToGo);
+      }
     });
   };
 
