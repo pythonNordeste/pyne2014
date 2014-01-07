@@ -38,12 +38,12 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="/#evento">Evento</a></li>
-            <li><a href="/#palestrantes">Palestrantes</a></li>
-            <li><a href="/#inscricoes">Inscreva-se</a></li>
-            <li><a href="/#inscricoes">Submissão de palestras</a></li>
-            <li><a href="/#patrocinadores">Patrocinadores</a></li>
-            <li><a href="#contato">Contato</a></li>
+            <li><a data-article="about" href="/#evento">Evento</a></li>
+            <li><a data-article="speakers" href="/#palestrantes">Palestrantes</a></li>
+            <li><a href="#">Inscreva-se</a></li>
+            <li><a data-article="papers" href="/#inscricoes">Submissão de palestras</a></li>
+            <li><a data-article="sponsors" href="/#patrocinadores">Patrocinadores</a></li>
+            <li><a data-article="contact" href="#contato">Contato</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -53,6 +53,7 @@
       <div class="container">
         <div class="row centered">
           <img src="assets/images/logo.png" alt="Python Nordeste 2014">
+          <p class="event-date">1 a 3 de maio</p>
         </div><!-- /row -->
       </div><!-- /container -->
     </div><!-- /headerwrap -->
@@ -127,9 +128,15 @@
       </article>
     </div>
 
-    <article class="container">
+    <article class="container sponsors">
       <div class="row centered">
         <h2>Patrocinadores</h2>
+      </div>
+    </article><!-- /container -->
+
+    <article class="container papers">
+      <div class="row centered">
+        <h2>Submissão de palestras</h2>
       </div>
     </article><!-- /container -->
 
@@ -139,11 +146,14 @@
       </div>
     </article><!-- /container -->
 
-    <article class="container">
-      <hr>
-      <p class="centered">Created by BlackTie.co - Attribution License 3.0 - 2013</p>
+    <article class="contact">
+      <p class="centered">Deseja entrar em contato conosco? Envie um e-mail para <a href="mailto:joe@example.com" "python nordeste">email</a> e responderemos em breve.</p>
     </article><!-- /container -->
 
+    <article class="container">
+      <hr>
+      <p class="centered">Python Nordeste - 2014</p>
+    </article><!-- /container -->
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
