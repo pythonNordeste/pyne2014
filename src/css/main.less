@@ -1,0 +1,214 @@
+@import "bootstrap.less";
+@static: '/assets/';
+@primaryColor: #F1C40F;
+@secondaryColor: #3498db;
+
+/*
+ * Author: Carlos Alvarez
+ * URL: http://alvarez.is
+ *
+ * Project Name: FLATTY - Free Bootstrap 3 Theme
+ * Version: 1.0
+ * URL: http://blacktie.co
+ */
+
+body {
+  background-color: #f2f2f2;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: #555;
+
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Titles */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    color: @secondaryColor;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h3 {
+    color: #95a5a6;
+    font-weight: 400;
+}
+
+h4 {
+    color: #95a5a6;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+/* Paragraph & Typographic */
+p {
+    line-height: 28px;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+.centered {
+    text-align: center;
+}
+
+/* Links */
+a {
+    color: @primaryColor;
+    word-wrap: break-word;
+
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+    &:hover,
+    &:focus {
+        color: #7b7b7b;
+        text-decoration: none;
+        outline: 0;
+    }
+
+    &:before,
+    &:after {
+        -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+        -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+        -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+        -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+        transition: color 0.1s ease-in, background 0.1s ease-in;
+    }
+}
+
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.navbar-default {
+    background-color: @primaryColor;
+    border-color: transparent;
+}
+
+.navbar-default .navbar-brand {
+    color: white;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #222;
+}
+
+/* Helpers */
+
+.mt {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.form-control {
+    height: 42px;
+    font-size: 18px;
+    width: 280px;
+}
+
+i {
+    margin: 8px;
+    color: @primaryColor;
+}
+
+.full-bg {
+    width: 100%;
+
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    background-attachment: relative;
+    background-position: center center;
+}
+
+/* HeaderWrap */
+#headerwrap {
+    /* background: url(../img/bg01.jpg) no-repeat center top; */
+    background-color: @primaryColor;
+    margin-top: -20px;
+    padding-top:200px;
+    min-height: 650px;
+
+    h1 {
+        margin-top: 60px;
+        margin-bottom: 15px;
+        color: white;
+        font-size: 45px;
+        font-weight: 300;
+        letter-spacing: 1px;
+    }
+}
+
+.speakers {
+    // background-color: lighten(@secondaryColor, 30);
+    background-color: darken(#FFF, 10);
+}
+.speaker-info {
+    margin-top: 25px;
+}
+.speaker-rounded {
+  width: 255px;
+  height: 255px;
+  margin: 0 auto;
+  border: 1px solid #CCC;
+  border-radius: 50%;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    box-shadow: inset 0 0 0 130px rgba(52, 152, 219, .7);
+    .speaker-networks {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -o-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+  &.david { background: url('@{static}images/david.jpg'); }
+  &.medina { background: url('@{static}images/medina.jpg'); }
+  &.tupy { background: url('@{static}images/tupy.jpg'); }
+  // &.emerson { background: url('@{static}images/emerson.jpg'); }
+}
+.speaker-networks {
+  width: 100%;
+  height: 100%;
+  padding-top: 90px;
+  text-align: center;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -o-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-backface-visibility: hidden;
+}

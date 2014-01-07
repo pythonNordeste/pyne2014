@@ -1,0 +1,28 @@
+{
+  "name": "pyne2014",
+  "version": "0.0.1",
+  "description": "Python nordeste",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pythonNordeste/pyne2014.git"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/pythonNordeste/pyne2014/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.6.4",
+    "grunt-contrib-uglify": "~0.2.4",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-less": "~0.7.0",
+    "grunt-contrib-imagemin": "~0.3.0",
+    "grunt-contrib-watch": "~0.5.3"
+  },
+  "homepage": "https://github.com/pythonNordeste/pyne2014"
+}
