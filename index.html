@@ -38,11 +38,11 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#" data-article="evento">Evento</a></li>
-            <li><a href="#" data-article="palestrantes">Palestrantes</a></li>
-            <li><a href="http://www.eventick.com.br/python-nordeste-2014" target="_blank">Inscreva-se</a></li>
+            <li><a href="#evento" data-article="evento">Evento</a></li>
+            <li><a href="#palestrantes" data-article="palestrantes">Palestrantes</a></li>
+            <li><a href="http://www.eventick.com.br/python-nordeste-2014" data-article="inscricoes">Inscreva-se</a></li>
             <li><a href="http://call4paperz.com/events/python-nordeste-2014" target="_blank">Submissão de palestras</a></li>
-            <li><a href="#" data-article="patrocinadores">Patrocinadores</a></li>
+            <li><a href="#patrocinadores" data-article="patrocinadores">Patrocinadores</a></li>
             <li><a href="mailto:pyne2014@googlegroups.com?Subject=Python%20Nordeste">Contato</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -59,7 +59,7 @@
       </div><!-- /container -->
     </div><!-- /headerwrap -->
 
-    <div class="event-wrap full-bg" data-speed="0.6">
+    <div id="evento" class="event-wrap full-bg" data-speed="0.6">
       <article class="container evento">
         <div class="event-desc">
             <h2>O evento</h2>
@@ -79,8 +79,7 @@
       </article>
     </div>
 
-    <div class="palestrantes full-bg">
-
+    <div id="palestrantes" class="palestrantes full-bg">
       <article class="container">
 
         <div class="row centered">
@@ -137,12 +136,21 @@
                 <p>JusBrasil</p>
             </figcaption>
           </figure>
-        </div>
-
+       </div>
       </article>
     </div>
 
-    <div class="full-bg sponsors-wrap">
+
+    <div id="inscricoes" class="full-bg subscribe-wrap">
+      <article class="container inscricoes">
+        <div class="row centered">
+          <h2>Inscrições</h2>
+          <iframe src="http://eventick.com.br/python-nordeste-2014/embedded" frameborder="0" height="435px" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="no" allowtransparency="true"></iframe>
+        </div>
+      </article>
+    </div>
+
+    <div id="patrocinadores" class="full-bg sponsors-wrap">
       <article class="container patrocinadores">
         <div class="row centered">
           <h2>Patrocinadores</h2>

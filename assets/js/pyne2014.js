@@ -1,4 +1,4 @@
-/*! pyne2014 - v0.0.1 - 2014-01-07
+/*! pyne2014 - v0.0.1 - 2014-01-08
 * https://github.com/pythonNordeste/pyne2014
 * Copyright (c) 2014 ; Licensed  */
 $(function() {
