@@ -39,7 +39,7 @@ $(function() {
       return;
     }
 
-    $('body').stop().animate({
+    $('body, html').stop(true, true).animate({
       scrollTop : articleOffset.top - _this.HEADER_HEIGHT
     }, 1000, function(){
     document.location.hash = articleToGo;
@@ -83,6 +83,6 @@ $(function() {
     });
   };
 
-
   pyne2014.init();
+
 });
