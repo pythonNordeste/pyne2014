@@ -77,6 +77,16 @@ module.exports = function(grunt) {
         files: ['src/js/*.js'],
         tasks: ['minjs']
       }
+    },
+    imagemin: {
+      dynamic: {
+        files: [{
+          expand: true,
+          cwd: 'src',
+          src: ['**/*.{png,jpg,gif}'],
+          dest: 'assets'
+        }]
+      }
     }
   });
 
@@ -86,10 +96,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
 
   // Default task.
-  // grunt.registerTask('default', ['jshint', 'concat', 'uglify']);
-  grunt.registerTask('default', ['less', 'jshint', 'concat', 'uglify']);
+  grunt.registerTask('default', ['less', 'jshint', 'concat', 'uglify', 'imagemin']);
   grunt.registerTask('minjs', ['jshint', 'concat', 'uglify']);
 
 };
