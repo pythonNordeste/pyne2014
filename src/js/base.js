@@ -1,4 +1,4 @@
-/* global $, jQuery */
+/* global $, jQuery, google */
 
 $(function() {
 
@@ -9,6 +9,7 @@ $(function() {
     this.scrollHandler();
     this.initializeJqueryFilters();
     this.parallaxHandler();
+    this.initializeMap();
 
     window.pyne2014 = pyne2014;
   };
@@ -81,6 +82,33 @@ $(function() {
         }
       });
     });
+  };
+
+  pyne2014.initializeMap = function() {
+
+    ;(function(w, d, g) {
+
+      var marker, position, config, map, gMaps = g.maps;
+
+      position = new gMaps.LatLng(-12.980482, -38.456376);
+
+      config = {
+        center: position,
+        mapTypeControl: false,
+        mapTypeId: gMaps.MapTypeId.ROADMAP,
+        scrollwheel: false,
+        zoom: 16
+      };
+
+      map = new gMaps.Map(d.getElementById("map-canvas"), config);
+
+      marker = new gMaps.Marker({
+        map: map,
+        animation: gMaps.Animation.BOUNCE,
+        position: position,
+      });
+
+    }(window, document, google));
   };
 
   pyne2014.init();
