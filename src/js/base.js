@@ -61,13 +61,15 @@ $(function() {
       });
     }
 
-    $('.navbar-nav').on('click', 'a, img', function(e) {
+    var goTo = function(e) {
       var articleToGo = $(this).data('article');
       if (articleToGo) {
         e.preventDefault();
         _this.scrollPage(articleToGo);
       }
-    });
+    };
+    $('.navbar-nav').on('click', 'a, img', goTo);
+    $('.palestrantes [data-article]').on('click', goTo);
   };
 
   pyne2014.parallaxHandler = function() {

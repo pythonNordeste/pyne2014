@@ -1,4 +1,4 @@
-/*! pyne2014 - v0.0.1 - 2014-03-26
+/*! pyne2014 - v0.0.1 - 2014-04-01
 * https://github.com/pythonNordeste/pyne2014
 * Copyright (c) 2014 ; Licensed  */
 /*! jQuery v1.10.2 | (c) 2005, 2013 jQuery Foundation, Inc. | jquery.org/license
@@ -77,13 +77,15 @@ $(function() {
       });
     }
 
-    $('.navbar-nav').on('click', 'a, img', function(e) {
+    var goTo = function(e) {
       var articleToGo = $(this).data('article');
       if (articleToGo) {
         e.preventDefault();
         _this.scrollPage(articleToGo);
       }
-    });
+    };
+    $('.navbar-nav').on('click', 'a, img', goTo);
+    $('.palestrantes [data-article]').on('click', goTo);
   };
 
   pyne2014.parallaxHandler = function() {
