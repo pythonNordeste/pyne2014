@@ -90,12 +90,13 @@ $(function() {
 
     ;(function(w, d, g) {
 
-      var marker, position, config, map, gMaps = g.maps;
+      var marker, position, mapRenderPosition, config, map, gMaps = g.maps;
 
-      position = new gMaps.LatLng(-12.980482, -38.456376);
+      position = new gMaps.LatLng(-12.978778, -38.460592);
+      mapRenderPosition = new gMaps.LatLng(-12.9791148, -38.4574931);
 
       config = {
-        center: position,
+        center: mapRenderPosition,
         mapTypeControl: false,
         mapTypeId: gMaps.MapTypeId.ROADMAP,
         scrollwheel: false,

@@ -1,4 +1,4 @@
-/*! pyne2014 - v0.0.1 - 2014-04-01
+/*! pyne2014 - v0.0.1 - 2014-04-22
 * https://github.com/pythonNordeste/pyne2014
 * Copyright (c) 2014 ; Licensed  */
 /*! jQuery v1.10.2 | (c) 2005, 2013 jQuery Foundation, Inc. | jquery.org/license
@@ -106,12 +106,13 @@ $(function() {
 
     ;(function(w, d, g) {
 
-      var marker, position, config, map, gMaps = g.maps;
+      var marker, position, mapRenderPosition, config, map, gMaps = g.maps;
 
-      position = new gMaps.LatLng(-12.980482, -38.456376);
+      position = new gMaps.LatLng(-12.978778, -38.460592);
+      mapRenderPosition = new gMaps.LatLng(-12.9791148, -38.4574931);
 
       config = {
-        center: position,
+        center: mapRenderPosition,
         mapTypeControl: false,
         mapTypeId: gMaps.MapTypeId.ROADMAP,
         scrollwheel: false,
